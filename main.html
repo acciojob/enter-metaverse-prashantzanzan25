@@ -12,7 +12,11 @@
 	<button id="enterBtn">Enter</button>
 
 	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js"></script>
+    <script>
+	document.getElementById("enterBtn").addEventListener("click", function() {
+		document.getElementById("status").textContent = "Entered Metaverse";
+	});
+	</script>
 
 </body>
 
