@@ -13,9 +13,12 @@
 
 	<!-- the entire body must be written by student -->
     <script>
-	document.getElementById("enterBtn").addEventListener("click", function() {
-		document.getElementById("status").textContent = "Entered Metaverse";
-	});
+		it('updates status text to "Entered Metaverse" enclosed in <h1> tag on button click', () => {
+		    cy.visit(baseUrl);
+		    cy.get('#enterBtn').click();
+		    cy.get('#status').should('contain', 'Entered Metaverse').and('have.descendants', 'h1');
+		});
+
 	</script>
 
 </body>
